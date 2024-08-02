@@ -1,0 +1,17 @@
+{
+	"name": "Analysis",
+	"properties": {
+		"content": {
+			"query": "SELECT \n    [ProductKey], \n    SUM([SalesAmount]) as sum_SalesAmount\nFROM \n    [cso].[FactOnlineSales] \nGROUP BY \n    [ProductKey]\nORDER BY \n    ProductKey\nGO\n\n\n\n\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "DedicatedSQL_Demp",
+				"poolName": "DedicatedSQL_Demp"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

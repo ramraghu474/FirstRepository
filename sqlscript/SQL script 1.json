@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests\nWHERE request_id = 'QID330'\n\n\n\nALTER DATABASE DedicatedSQL_Demp\nSET RESULT_SET_CACHING ON;\n\n\nSELECT DATABASEPROPERTYEX('DedicatedSQL_Demp', 'IsResultSetCachingEnabled') AS ResultSetCachingStatus;\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "DedicatedSQL_Demp",
+				"poolName": "DedicatedSQL_Demp"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
